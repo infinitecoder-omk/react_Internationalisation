@@ -2,7 +2,6 @@ import { useState } from "react";
 import { ThemeToggleButton } from "../common/ThemeToggleButton";
 import { useTranslation } from "react-i18next";
 import WeddingFooter from "../wedding/WeddingFooter";
-import EventTimeline from "./EventTimeline";
 
 export default function Homepage() {
   const [langName, setLangName] = useState<string>("english");
@@ -36,8 +35,6 @@ export default function Homepage() {
               <option value="kannada">ಕನ್ನಡ</option>
               <option value="gujarati">ગુજરાતી</option>
               <option value="japanese">日本語</option>
-
-
             </select>
           </div>
 
@@ -47,23 +44,16 @@ export default function Homepage() {
 
       <div className="p-5 lg:p-6">
         <div className="w-full mb-10">
-          {/* <img
-            src="/images/wedding/wallpaper.jpg"
-            alt="user"
-            className="w-full h-80 object-cover border border-gray-200 dark:border-gray-800"
-          /> */}
-           <video
-    className="w-full h-140 object-cover border border-gray-200 dark:border-gray-800"
-    src="/images/wedding/208577_medium.mp4" 
-    //devWebClient/public/images/wedding/208577_medium.mp4
-    autoPlay
-    loop
-    muted
-    playsInline
-  />
+          <video
+            className="w-full h-140 object-cover border border-gray-200 dark:border-gray-800"
+            src="/images/wedding/208577_medium.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
         </div>
         <div className="space-y-6">
-          {/* <EventTimeline /> */}
           <WeddingFooter />
         </div>
       </div>
